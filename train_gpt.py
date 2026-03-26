@@ -5,7 +5,7 @@ Hard stop: To keep readable for newcomers, let's make sure `train_gpt.py` and `t
 """
 
 from __future__ import annotations
-
+import torch.nn.functional as F
 import copy
 import glob
 import io
@@ -613,7 +613,7 @@ class MLP(nn.Module):
         self.proj._zero_init = True
 
     def forward(self, x: Tensor) -> Tensor:
-        x = torch.relu(self.fc(x))
+        x = F.leaky_relu(self.fc(x), negative_slope=0.5)
         return self.proj(x.square())
 
 
