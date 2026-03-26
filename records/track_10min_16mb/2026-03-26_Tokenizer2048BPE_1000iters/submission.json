@@ -1,0 +1,11 @@
+{
+  "author": "Nima Dorzh",
+  "github_id": "nimadorzh",
+  "name": "Vocab-2048 BPE Tokenizer",
+  "blurb": "Replaced default SP-1024 tokenizer with SP-2048 BPE trained on FineWeb. Larger vocabulary reduces embedding table fragmentation and improves bits-per-byte efficiency. Trained 1000 iters on RTX 4060 Mobile with 10 shards.",
+  "date": "2026-03-26T17:00:00Z",
+  "val_loss": 2.67078018,
+  "val_bpb": 1.21388788,
+  "bytes_total": 13063604,
+  "bytes_code": 47686
+}
